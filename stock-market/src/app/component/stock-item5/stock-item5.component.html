@@ -1,0 +1,9 @@
+<p>stock-item5 - ngIf directive example </p>
+<div class="stock-container">
+    <div class="name">{{stock.name + ' (' + stock.code + ')'}}</div>
+    <div class="price" [class]="stock.isPositiveChange() ? 'positive' : 'negative'">$ {{stock.price}}</div>
+
+    <!-- conditionality with *ngIf="!stock.favorite" tells Angular to add the element if the stock is not favorited, and remove it from the DOM if it is currently a favorite stock -->
+    <button (click)="toggleFavorite($event)" *ngIf="!stock.favorite">Add to Favorite</button>
+
+</div>
