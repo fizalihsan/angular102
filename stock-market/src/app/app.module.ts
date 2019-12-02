@@ -8,6 +8,7 @@ import { StockItem3Component } from './component/stock-item3/stock-item3.compone
 import { StockItem4Component } from './component/stock-item4/stock-item4.component';
 import { StockItem5Component } from './component/stock-item5/stock-item5.component';
 import { StockItem6Component } from './component/stock-item6/stock-item6.component';
+import { StockItem7Component } from './component/stock-item7/stock-item7.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { StockItem6Component } from './component/stock-item6/stock-item6.compone
     StockItem3Component,
     StockItem4Component,
     StockItem5Component,
-    StockItem6Component
+    StockItem6Component,
+    StockItem7Component
   ],
   imports: [
     BrowserModule
