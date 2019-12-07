@@ -11,4 +11,7 @@
   <!-- Root component defines the member variable 'stockArray' whose value is injected into the member variable 'stocks' in StockItem7Component-->
   <!-- Event binding: output of toggleFavoriteEmitter in StockItem7Component is injected into root component -->
   <app-stock-item7 [stocks]="stockArray" (toggleFavoriteEmitter)="toggleFavorite($event)"></app-stock-item7>
+  <app-create-stock></app-create-stock>
+  <app-create-stock2></app-create-stock2>
+  <app-create-stock3></app-create-stock3>
 </div>

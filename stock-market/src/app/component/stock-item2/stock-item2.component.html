@@ -1,4 +1,5 @@
-<p>{{title}} - [class] binding example </p>
+<hr />
+<h2>{{title}} - [class] binding example </h2>
 <div class="stock-container">
     <div class="name">{{stock.name + ' (' + stock.code + ')'}}</div>
     <div class="price" [class]="stock.isPositiveChange() ? 'positive' : 'negative'">$ {{stock.price}}</div>
