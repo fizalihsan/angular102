@@ -1,0 +1,57 @@
+<hr/>
+<h2>product-test works!</h2>
+
+<div class="form-group">
+    <form (ngSubmit)="save(productForm)" #productForm="ngForm">
+        <div ngModelGroup="product">
+            <!-- Name -->
+
+            <div class="product-name">
+                <input type="text" placeholder="Name" required minlength="3" name="name" ngModel #name="ngModel">
+            </div>
+            <div class="error" *ngIf="name.touched && name.errors">
+                <div *ngIf="name.errors.required">
+                    Name is Mandatory
+                </div>
+                <div *ngIf="name.errors.minlength">
+                    Name must be at least 3 characters in length
+                </div>
+            </div>
+            
+            <!-- Price -->
+            
+            <div class="product-price">
+                <input type="number" placeholder="Price" required name="price" ngModel #price="ngModel">
+            </div>
+            <div class="error" *ngIf="price.touched && price.errors && price.errors.required">
+                Price is Mandatory
+            </div>
+
+            <!-- Image Url -->
+
+            <div class="image-url">
+                <input type="url" placeholder="Image URL" required name="imageUrl" ngModel #imageUrl="ngModel">
+            </div>
+            <div class="error" *ngIf="imageUrl.touched && imageUrl.errors">
+                <div *ngIf="imageUrl.errors.required">
+                    Image URL is Mandatory
+                </div>
+                <div *ngIf="imageUrl.errors.invalid">
+                    Image URL is invalid
+                </div>
+            </div>
+            
+            <!-- On Sale -->
+            
+            <div class="is-on-sale">
+                <input type="checkbox" placeholder="Is on sale?" name="isOnSale" ngModel>Is on sale?
+            </div>
+        </div>
+        <div *ngIf="productForm.invalid && productForm.touched" class="error">
+            Form is invalid
+        </div>
+        <button type="submit" [disabled]="productForm.invalid">Save</button>
+    </form>
+
+    <h4>Product is {{product | json}}</h4>
+</div>

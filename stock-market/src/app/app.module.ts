@@ -13,6 +13,8 @@ import { StockItem7Component } from './component/stock-item7/stock-item7.compone
 import { CreateStockComponent } from './component/create-stock/create-stock.component';
 import { CreateStock2Component } from './component/create-stock2/create-stock2.component';
 import { CreateStock3Component } from './component/create-stock3/create-stock3.component';
+import { CreateStock4Component } from './component/create-stock4/create-stock4.component';
+import { ProductTestComponent } from './component/product-test/product-test.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { CreateStock3Component } from './component/create-stock3/create-stock3.c
     StockItem7Component,
     CreateStockComponent,
     CreateStock2Component,
-    CreateStock3Component
+    CreateStock3Component,
+    CreateStock4Component,
+    ProductTestComponent
   ],
   imports: [
     BrowserModule,
