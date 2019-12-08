@@ -1,0 +1,50 @@
+<hr />
+<h2>stock-item12 - Reactive Form writing data from component to UI</h2>
+
+<div class="form-group">
+    <form [formGroup]="stockForm" (ngSubmit)="onSubmit()">
+        <!-- Name -->
+        <div class="stock-name">
+            <input type="text" placeholder="Stock Name" name="stockName" formControlName="name">
+        </div>
+        <div *ngIf="stockForm.get('name').invalid &&
+                          ( stockForm.get('name').dirty || stockForm.get('name').touched )">
+            Name is required
+        </div>
+
+        <!-- Code -->
+        <div class="stock-code">
+            <input type="text" placeholder="Stock Code" formControlName="code">
+        </div>
+        <div *ngIf="code.invalid && ( code.dirty || code.touched )">
+            <div *ngIf="code.errors.required">
+                Stock Code is required
+            </div>
+            <div *ngIf="code.errors.minlength">
+                Stock Code must be at least 2 characters
+            </div>
+        </div>
+
+        <!-- Price -->
+        <div class="stock-price">
+            <input type="number" placeholder="Stock Price" formControlName="price">
+        </div>
+        <div *ngIf="price.invalid && ( price.dirty || price.touched )">
+            <div *ngIf="price.errors.required">
+                Stock Price is required
+            </div>
+            <div *ngIf="price.errors.min">
+                Stock Price must be positive
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <button type="submit">Submit</button>
+        <button type="button" (click)="resetForm()">Reset</button>
+        <button type="button" (click)="loadStockFromServer()"> Simulate Stock Load from Server </button>
+        <button type="button" (click)="patchStockForm()"> Patch Stock Form </button>
+    </form>
+</div>
+
+<p>Form Control value: {{ stockForm.value | json }}</p>
+<p>Form Control status: {{ stockForm.status | json }}</p>

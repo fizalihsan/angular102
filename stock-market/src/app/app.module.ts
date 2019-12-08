@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { StockItemComponent } from './component/stock-item/stock-item.component';
@@ -15,6 +15,12 @@ import { CreateStock2Component } from './component/create-stock2/create-stock2.c
 import { CreateStock3Component } from './component/create-stock3/create-stock3.component';
 import { CreateStock4Component } from './component/create-stock4/create-stock4.component';
 import { ProductTestComponent } from './component/product-test/product-test.component';
+import { StockItem8Component } from './component/stock-item8/stock-item8.component';
+import { StockItem9Component } from './component/stock-item9/stock-item9.component';
+import { StockItem10Component } from './component/stock-item10/stock-item10.component';
+import { StockItem11Component } from './component/stock-item11/stock-item11.component';
+import { StockItem12Component } from './component/stock-item12/stock-item12.component';
+import { StockItem13Component } from './component/stock-item13/stock-item13.component';
 
 @NgModule({
   declarations: [
@@ -30,11 +36,18 @@ import { ProductTestComponent } from './component/product-test/product-test.comp
     CreateStock2Component,
     CreateStock3Component,
     CreateStock4Component,
-    ProductTestComponent
+    ProductTestComponent,
+    StockItem8Component,
+    StockItem9Component,
+    StockItem10Component,
+    StockItem11Component,
+    StockItem12Component,
+    StockItem13Component
   ],
   imports: [
     BrowserModule,
-    FormsModule // without this, 'ngModel' will be an unknown property on 'input'.
+    FormsModule, // without this, 'ngModel' will be an unknown property on 'input'.
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
