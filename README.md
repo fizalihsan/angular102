@@ -1,7 +1,7 @@
 
 Angular 8 Learning Exercises from O'Reilly book "Angular - Up & Running"
 
-* Project: Stock
+* Project: Stock-market
     * Component `stock-item` demonstrates data binding 
     * Component `stock-item2` demonstrates a model
     * Component `stock-item3` demonstrates `ngClass` directive
@@ -19,5 +19,15 @@ Angular 8 Learning Exercises from O'Reilly book "Angular - Up & Running"
     * Component `stock-item11` demonstrates reactive-forms using validation
     * Component `stock-item12` demonstrates reactive-forms copying data from component to UI
     * Component `stock-item13` demonstrates reactive-forms with form arrays
+* Project: Stock-market2
+    * Components `stock-item` and `stock-list` demonstrates services and observables
 
 Start the server `ng serve` and access it via http://localhost:4200
+
+## CLI Reference
+
+* `ng serve` to start the server
+* `ng new <project>` create new project
+* `ng generate component <dir/name>` create new component
+* `ng g class <dir/name>` create new model class
+* `ng g service <dir/name>` create new service. 
