@@ -35,6 +35,7 @@ export class CreateStockComponent {
       //   this.messageService.message = 'Stock with stock code: ' + this.stock.code + ' already exists';
       // }
 
+      // Version 2 - Using Rx Observables
       this.stockService.createStock(this.stock)
         .subscribe((result: any) => {
           this.messageService.message = result.msg;

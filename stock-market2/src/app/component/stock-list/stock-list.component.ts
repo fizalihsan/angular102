@@ -13,17 +13,17 @@ export class StockListComponent implements OnInit {
   constructor(private stockService: StockService) { }
 
   ngOnInit() {
-    // Version 1
+    // Version 1 - Hardcoded values
     // this.stocks = [
     //   new Stock('Test Stock Company', 'TSC', 85, 80, 'NASDAQ'),
     //   new Stock('Second Stock Company', 'SSC', 10, 20, 'NSE'),
     //   new Stock('Last Stock Company', 'LSC', 876, 765, 'NYSE')
     // ];
 
-    // Version 2
+    // Version 2 - Using sync calls on Service
     // this.stocks = this.stockService.getStocks();
 
-    // Version 3
+    // Version 3 - Using Rx Observables
     this.stockService.getStocks().subscribe(stocks => {this.stocks = stocks;});
   }
 

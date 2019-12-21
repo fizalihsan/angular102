@@ -21,12 +21,19 @@ Angular 8 Learning Exercises from O'Reilly book "Angular - Up & Running"
     * Component `stock-item13` demonstrates reactive-forms with form arrays
 * Project: Stock-market2
     * Components `stock-item` and `stock-list` demonstrates services and observables
+    * Service `Stock-Service2` demonstrates `HttpClient2`
 
-Start the server `ng serve` and access it via http://localhost:4200
 
-## CLI Reference
+* Start the Ng server `ng serve` and access it via http://localhost:4200
+* Start the Stock API server following the instructions:
+    * `cd server`
+    * `npm i` - installs all the dependencies for the Node.js server
+    * `node index.js` - starts the server on port 3000
+
+## Angular CLI Reference
 
 * `ng serve` to start the server
+* `ng serve --proxy-config proxy.conf.json` to start server with proxy configs for CORS
 * `ng new <project>` create new project
 * `ng generate component <dir/name>` create new component
 * `ng g class <dir/name>` create new model class

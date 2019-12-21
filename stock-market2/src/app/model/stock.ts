@@ -7,7 +7,7 @@ export class Stock {
         public previousPrice: number,
         public exchange: string) { }
 
-    isPositiveChange(): boolean {
+    public isPositiveChange(): boolean {
         return this.price >= this.previousPrice;
     }
 }

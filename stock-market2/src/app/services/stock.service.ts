@@ -4,12 +4,13 @@ import { Stock } from '../model/stock';
 import { Observable } from 'rxjs'; 
 import { throwError } from 'rxjs'; 
 import { of as ObservableOf } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class StockService {
 
   private stocks: Stock[];
-  constructor() {
+  constructor(private http: HttpClient) {
     this.stocks = [
       new Stock('Test Stock Company', 'TSC', 85, 80, 'NASDAQ'),
       new Stock('Second Stock Company', 'SSC', 10, 20, 'NSE'),
