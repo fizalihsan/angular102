@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { StockListComponent } from './component/stock-list/stock-list.component';
@@ -13,6 +13,9 @@ import { StockList2Component } from './component/stock-list2/stock-list2.compone
 import { StockItem2Component } from './component/stock-item2/stock-item2.component';
 import { CreateStock2Component } from './component/create-stock2/create-stock2.component';
 import { Stock2Service } from './services/stock2.service';
+import { AuthService } from './services/auth.service';
+import { StockAppInterceptor } from './interceptors/stock-app.interceptor';
+import { StockAuthInterceptor } from './interceptors/stock-auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,19 @@ import { Stock2Service } from './services/stock2.service';
   providers: [
     StockService,
     Stock2Service,
-    MessageService
+    MessageService,
+    AuthService,
+    //adding an interceptor
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: StockAppInterceptor,
+      multi: true, // the fact that it is an array of interceptors
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: StockAuthInterceptor,
+      multi: true, // the fact that it is an array of interceptors
+    }
   ],
   bootstrap: [AppComponent]
 })

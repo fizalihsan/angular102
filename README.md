@@ -21,7 +21,8 @@ Angular 8 Learning Exercises from O'Reilly book "Angular - Up & Running"
     * Component `stock-item13` demonstrates reactive-forms with form arrays
 * Project: Stock-market2
     * Components `stock-item` and `stock-list` demonstrates services and observables
-    * Service `Stock-Service2` demonstrates `HttpClient2`
+    * Service `Stock-Service2` demonstrates `HttpClient`
+    * Service `AuthService` helps demonstrate HttpClient interceptor concept
 
 
 * Start the Ng server `ng serve` and access it via http://localhost:4200
