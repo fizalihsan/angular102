@@ -23,6 +23,8 @@ Angular 8 Learning Exercises from O'Reilly book "Angular - Up & Running"
     * Components `stock-item` and `stock-list` demonstrates services and observables
     * Service `Stock-Service2` demonstrates `HttpClient`
     * Service `AuthService` helps demonstrate HttpClient interceptor concept
+* Project: Stock-market3
+    * This project demonstrates the routing concepts in Angular
 
 
 * Start the Ng server `ng serve` and access it via http://localhost:4200
@@ -39,3 +41,4 @@ Angular 8 Learning Exercises from O'Reilly book "Angular - Up & Running"
 * `ng generate component <dir/name>` create new component
 * `ng g class <dir/name>` create new model class
 * `ng g service <dir/name>` create new service. 
+* `ng g module app-routes --flat --module=app` - create new module named `app-routes.module.ts` under folder `/app`
